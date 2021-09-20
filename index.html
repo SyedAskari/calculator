@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="KJECalculatorScreenSize" class="KJECenter" style="position:relative; width:100%">
+    <div id="KJEWaitContainer">
+       <div id="KJEWait" class="KJEWait" style="display: none;"></div>
+    </div>
+    <div id="KJECalculatorTable" style="margin: 0px auto; width: 850px;" class="KJECalculatorTable">
+       <div id="KJECalculatorTableCell" class="KJECalculator KJEEase" style="width: 100%; height: 888px; overflow: visible; transition: height 0.5s ease 0s;">
+          <span id="KJESplash" class="KJEBold" style="color: rgb(51, 51, 51); opacity: 0; display: none;">
+             <br><br><br>Financial Calculators from<br>Dinkytown.net
+             <p class="KJEFooter">Financial Calculators ©1998-2020 KJE Computer Solutions, Inc.</p>
+             <br><br><br><br><br><br><br><br>
+          </span>
+          <div id="KJEMain" class="KJEMain" style="opacity: 1; display: block; overflow: visible;">
+             <div id="KJEMenuContainer">
+                <button id="KJEMenu" type="button" class="KJEMenu" tabindex="0" aria-label="Additional Functions "></button>
+                <div role="region" aria-label="Additional Functions " id="KJEMenuWindow"></div>
+             </div>
+             <div id="KJETitle" aria-live="polite" class="KJETitle KJEError KJEErrorCalculation" style="padding: 25px;">Your current age must be less than your age at retirement. </div>
+             <div id="KJERequiredNote" class="KJEFooter"><span class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span> indicates required.</div>
+             <div id="KJEInputs" class="KJEInputs" style="display: block;">
+                <div id="KJE-D-INPUTS" class="KJEDrop">
+                   <div id="KJE-P-INPUTS" role="button" aria-controls="KJE-E-INPUTS" class="KJEDropper" tabindex="0" aria-expanded="true">
+                      <table class="KJEToggleTable" role="presentation">
+                         <tbody>
+                            <tr>
+                               <td class="KJEToggleTitle KJEToggleTitle99Cell">
+                                  <h2 class="KJEToggleTitle">Fixed annuity inputs:</h2>
+                                  <span class="KJEAccessibleInLine" aria-live="polite"><br>Press spacebar to hide inputs</span>
+                               </td>
+                               <td class="KJEToggleIcon KJEInputIcon">
+                                  <div class="KJEToggleClose" aria-hidden="true"></div>
+                               </td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                </div>
+                <div id="KJE-E-INPUTS" class="KJEDroppee" style="display: block; width: 100%; transition: height 0.5s ease 0s; height: 255px;">
+                   <div id="KJE-C-STARTING_BALANCE" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-STARTING_BALANCE" aria-label="Define: Starting Balance" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-STARTING_BALANCE" class="KJEHelp " id="KJE-LB-STARTING_BALANCE"><span id="KJE-RT-STARTING_BALANCE" class="KJEHelp ">Starting Balance</span><span id="KJE-RC-STARTING_BALANCE" class="KJEHelp ">:</span><span id="KJE-RR-STARTING_BALANCE" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-STARTING_BALANCE" class="KJEAccessibleInLine">Enter an amount between $0 and $1,000,000,000,000</span></label></div>
+                      <input id="KJE-STARTING_BALANCE" name="STARTING_BALANCE" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-STARTING_BALANCE" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-STARTING_BALANCE" aria-hidden="true" role="dialog" aria-label="Define: Starting Balance">
+                         <button id="KJE-POCLOSE-STARTING_BALANCE" class="KJECloseButton" type="button" aria-label="Close definition Starting Balance" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Starting balance</h3>
+                            <p class="KJEDefinition">This is the initial amount that you will contribute to your fixed annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">$0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">$10k</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">$100k</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">$1m</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Starting Balance slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-ANNUAL_CONTRIBUTION" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-ANNUAL_CONTRIBUTION" aria-label="Define: Annual contribution" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-ANNUAL_CONTRIBUTION" class="KJEHelp " id="KJE-LB-ANNUAL_CONTRIBUTION"><span id="KJE-RT-ANNUAL_CONTRIBUTION" class="KJEHelp ">Annual contribution</span><span id="KJE-RC-ANNUAL_CONTRIBUTION" class="KJEHelp ">:</span><span id="KJE-RR-ANNUAL_CONTRIBUTION" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-ANNUAL_CONTRIBUTION" class="KJEAccessibleInLine">Enter an amount between $0 and $25,000,000</span></label></div>
+                      <input id="KJE-ANNUAL_CONTRIBUTION" name="ANNUAL_CONTRIBUTION" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-ANNUAL_CONTRIBUTION" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-ANNUAL_CONTRIBUTION" aria-hidden="true" role="dialog" aria-label="Define: Annual contribution">
+                         <button id="KJE-POCLOSE-ANNUAL_CONTRIBUTION" class="KJECloseButton" type="button" aria-label="Close definition Annual contribution" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Annual contribution</h3>
+                            <p class="KJEDefinition">The amount you will contribute to your annuity each year.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">$0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">$1k</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">$10k</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">$100k</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Annual contribution slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-CURRENT_AGE" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-CURRENT_AGE" aria-label="Define: Current age" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-CURRENT_AGE" class="KJEHelp " id="KJE-LB-CURRENT_AGE"><span id="KJE-RT-CURRENT_AGE" class="KJEHelp ">Current age</span><span id="KJE-RC-CURRENT_AGE" class="KJEHelp ">:</span><span id="KJE-RR-CURRENT_AGE" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-CURRENT_AGE" class="KJEAccessibleInLine">Enter an amount between 15 and 90</span></label></div>
+                      <input id="KJE-CURRENT_AGE" name="CURRENT_AGE" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-CURRENT_AGE" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-CURRENT_AGE" aria-hidden="true" role="dialog" aria-label="Define: Current age">
+                         <button id="KJE-POCLOSE-CURRENT_AGE" class="KJECloseButton" type="button" aria-label="Close definition Current age" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Current age</h3>
+                            <p class="KJEDefinition">Your current age.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">15</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">40</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">65</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">90</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Current age slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-AGE_OF_RETIREMENT" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-AGE_OF_RETIREMENT" aria-label="Define: Withdrawal age" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-AGE_OF_RETIREMENT" class="KJEHelp " id="KJE-LB-AGE_OF_RETIREMENT"><span id="KJE-RT-AGE_OF_RETIREMENT" class="KJEHelp ">Withdrawal age</span><span id="KJE-RC-AGE_OF_RETIREMENT" class="KJEHelp ">:</span><span id="KJE-RR-AGE_OF_RETIREMENT" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-AGE_OF_RETIREMENT" class="KJEAccessibleInLine">Enter an amount between 10 and 90</span></label></div>
+                      <input id="KJE-AGE_OF_RETIREMENT" name="AGE_OF_RETIREMENT" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-AGE_OF_RETIREMENT" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-AGE_OF_RETIREMENT" aria-hidden="true" role="dialog" aria-label="Define: Withdrawal age">
+                         <button id="KJE-POCLOSE-AGE_OF_RETIREMENT" class="KJECloseButton" type="button" aria-label="Close definition Withdrawal age" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Withdrawal age</h3>
+                            <p class="KJEDefinition">Age you wish to withdraw your annuity balance. This calculator assumes that the year you start withdrawing funds, you do not make any contributions to your annuity. So if you start withdrawals at age 65, your last contribution would have happened when you were actually age 64.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">10</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">36</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">63</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">90</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Withdrawal age slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-CURRENT_TAX_RATE" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-CURRENT_TAX_RATE" aria-label="Define: Current tax rate" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-CURRENT_TAX_RATE" class="KJEHelp " id="KJE-LB-CURRENT_TAX_RATE"><span id="KJE-RT-CURRENT_TAX_RATE" class="KJEHelp ">Current tax rate</span><span id="KJE-RC-CURRENT_TAX_RATE" class="KJEHelp ">:</span><span id="KJE-RR-CURRENT_TAX_RATE" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-CURRENT_TAX_RATE" class="KJEAccessibleInLine">Enter an amount between 0 and 50</span></label></div>
+                      <input id="KJE-CURRENT_TAX_RATE" name="CURRENT_TAX_RATE" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-CURRENT_TAX_RATE" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-CURRENT_TAX_RATE" aria-hidden="true" role="dialog" aria-label="Define: Current tax rate">
+                         <button id="KJE-POCLOSE-CURRENT_TAX_RATE" class="KJECloseButton" type="button" aria-label="Close definition Current tax rate" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Current tax rate</h3>
+                            <p class="KJEDefinition">The current marginal tax rate you expect to pay on your taxable investments.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Current tax rate slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-RETIREMENT_TAX_RATE" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-RETIREMENT_TAX_RATE" aria-label="Define: Retirement tax rate" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-RETIREMENT_TAX_RATE" class="KJEHelp " id="KJE-LB-RETIREMENT_TAX_RATE"><span id="KJE-RT-RETIREMENT_TAX_RATE" class="KJEHelp ">Retirement tax rate</span><span id="KJE-RC-RETIREMENT_TAX_RATE" class="KJEHelp ">:</span><span id="KJE-RR-RETIREMENT_TAX_RATE" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-RETIREMENT_TAX_RATE" class="KJEAccessibleInLine">Enter an amount between 0% and 50%</span></label></div>
+                      <input id="KJE-RETIREMENT_TAX_RATE" name="RETIREMENT_TAX_RATE" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-RETIREMENT_TAX_RATE" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-RETIREMENT_TAX_RATE" aria-hidden="true" role="dialog" aria-label="Define: Retirement tax rate">
+                         <button id="KJE-POCLOSE-RETIREMENT_TAX_RATE" class="KJECloseButton" type="button" aria-label="Close definition Retirement tax rate" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Retirement tax rate</h3>
+                            <p class="KJEDefinition">The marginal tax rate you expect to pay on your investments at retirement.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Retirement tax rate slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-RATE_OF_RETURN" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-RATE_OF_RETURN" aria-label="Define: Taxable account's return" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-RATE_OF_RETURN" class="KJEHelp " id="KJE-LB-RATE_OF_RETURN"><span id="KJE-RT-RATE_OF_RETURN" class="KJEHelp ">Taxable account's return</span><span id="KJE-RC-RATE_OF_RETURN" class="KJEHelp ">:</span><span id="KJE-RR-RATE_OF_RETURN" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-RATE_OF_RETURN" class="KJEAccessibleInLine">Enter an amount between 0% and 20%</span></label></div>
+                      <input id="KJE-RATE_OF_RETURN" name="RATE_OF_RETURN" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-RATE_OF_RETURN" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-RATE_OF_RETURN" aria-hidden="true" role="dialog" aria-label="Define: Taxable account's return">
+                         <button id="KJE-POCLOSE-RATE_OF_RETURN" class="KJECloseButton" type="button" aria-label="Close definition Taxable account's return" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Taxable account's expected rate of return</h3>
+                            <p class="KJEDefinition">The annual rate of return you would expect if you deposited this money into a taxable account. This calculator assumes that your return is compounded annually and your contributions are made at the beginning of each year.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Taxable account's return slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div style="height:10px"></div>
+                </div>
+                <div id="KJE-D-INPUTS3" class="KJEDrop">
+                   <div id="KJE-P-INPUTS3" role="button" aria-controls="KJE-E-INPUTS3" class="KJEDropper" tabindex="0" aria-expanded="true">
+                      <table class="KJEToggleTable" role="presentation">
+                         <tbody>
+                            <tr>
+                               <td class="KJEToggleTitle KJEToggleTitle99Cell">
+                                  <h2 class="KJEToggleTitle">Interest rate information:</h2>
+                                  <span class="KJEAccessibleInLine" aria-live="polite"><br>Press spacebar to hide inputs</span>
+                               </td>
+                               <td class="KJEToggleIcon KJEInputIcon">
+                                  <div class="KJEToggleClose" aria-hidden="true"></div>
+                               </td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                </div>
+                <div id="KJE-E-INPUTS3" class="KJEDroppee" style="display: block; width: 100%; transition: height 0.5s ease 0s; height: 171px;">
+                   <div id="KJE-C-RATE_OF_RETURN1" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-RATE_OF_RETURN1" aria-label="Define: Initial interest rate" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-RATE_OF_RETURN1" class="KJEHelp " id="KJE-LB-RATE_OF_RETURN1"><span id="KJE-RT-RATE_OF_RETURN1" class="KJEHelp ">Initial interest rate</span><span id="KJE-RC-RATE_OF_RETURN1" class="KJEHelp ">:</span><span id="KJE-RR-RATE_OF_RETURN1" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-RATE_OF_RETURN1" class="KJEAccessibleInLine">Enter an amount between 0% and 20%</span></label></div>
+                      <input id="KJE-RATE_OF_RETURN1" name="RATE_OF_RETURN1" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-RATE_OF_RETURN1" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-RATE_OF_RETURN1" aria-hidden="true" role="dialog" aria-label="Define: Initial interest rate">
+                         <button id="KJE-POCLOSE-RATE_OF_RETURN1" class="KJECloseButton" type="button" aria-label="Close definition Initial interest rate" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Initial interest rate</h3>
+                            <p class="KJEDefinition">This is the initial guaranteed interest rate for your fixed annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Initial interest rate slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-INITIAL_RATE_YEARS" class="KJEInputContainer" style="height: 42px;">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 0px;"><button id="KJE-PO-INITIAL_RATE_YEARS" aria-label="Define: Years initial rate is guaranteed" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-INITIAL_RATE_YEARS" class="KJEHelp " id="KJE-LB-INITIAL_RATE_YEARS"><span id="KJE-RT-INITIAL_RATE_YEARS" class="KJEHelp ">Years initial rate is guaranteed</span><span id="KJE-RC-INITIAL_RATE_YEARS" class="KJEHelp ">:</span><span id="KJE-RR-INITIAL_RATE_YEARS" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-INITIAL_RATE_YEARS" class="KJEAccessibleInLine">Enter an amount between 0 and 90</span></label></div>
+                      <input id="KJE-INITIAL_RATE_YEARS" name="INITIAL_RATE_YEARS" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-INITIAL_RATE_YEARS" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-INITIAL_RATE_YEARS" aria-hidden="true" role="dialog" aria-label="Define: Years initial rate is guaranteed">
+                         <button id="KJE-POCLOSE-INITIAL_RATE_YEARS" class="KJECloseButton" type="button" aria-label="Close definition Years initial rate is guaranteed" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Years initial rate is guaranteed</h3>
+                            <p class="KJEDefinition">The number of years the initial interest rate is guaranteed.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">30</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">60</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">90</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Years initial rate is guaranteed slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-RATE_OF_RETURN2" class="KJEInputContainer" style="height: 42px;">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 0px;"><button id="KJE-PO-RATE_OF_RETURN2" aria-label="Define: Expected average interest rate" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-RATE_OF_RETURN2" class="KJEHelp " id="KJE-LB-RATE_OF_RETURN2"><span id="KJE-RT-RATE_OF_RETURN2" class="KJEHelp ">Expected average interest rate</span><span id="KJE-RC-RATE_OF_RETURN2" class="KJEHelp ">:</span><span id="KJE-RR-RATE_OF_RETURN2" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-RATE_OF_RETURN2" class="KJEAccessibleInLine">Enter an amount between 0% and 20%</span></label></div>
+                      <input id="KJE-RATE_OF_RETURN2" name="RATE_OF_RETURN2" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-RATE_OF_RETURN2" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-RATE_OF_RETURN2" aria-hidden="true" role="dialog" aria-label="Define: Expected average interest rate">
+                         <button id="KJE-POCLOSE-RATE_OF_RETURN2" class="KJECloseButton" type="button" aria-label="Close definition Expected average interest rate" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Expected average interest rate</h3>
+                            <p class="KJEDefinition">This is the interest rate you would expect to average after the initial interest rate is no longer guaranteed.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Expected average interest rate slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-RATE_OF_RETURN3" class="KJEInputContainer" style="height: 42px;">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 0px;"><button id="KJE-PO-RATE_OF_RETURN3" aria-label="Define: Minimum guaranteed rate" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-RATE_OF_RETURN3" class="KJEHelp " id="KJE-LB-RATE_OF_RETURN3"><span id="KJE-RT-RATE_OF_RETURN3" class="KJEHelp ">Minimum guaranteed rate</span><span id="KJE-RC-RATE_OF_RETURN3" class="KJEHelp ">:</span><span id="KJE-RR-RATE_OF_RETURN3" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-RATE_OF_RETURN3" class="KJEAccessibleInLine">Enter an amount between 0% and 20%</span></label></div>
+                      <input id="KJE-RATE_OF_RETURN3" name="RATE_OF_RETURN3" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-RATE_OF_RETURN3" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-RATE_OF_RETURN3" aria-hidden="true" role="dialog" aria-label="Define: Minimum guaranteed rate">
+                         <button id="KJE-POCLOSE-RATE_OF_RETURN3" class="KJECloseButton" type="button" aria-label="Close definition Minimum guaranteed rate" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Minimum guaranteed interest rate</h3>
+                            <p class="KJEDefinition">This is the interest rate that is guaranteed after the initial rate has ended.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Minimum guaranteed rate slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div style="height:10px"></div>
+                </div>
+                <div id="KJE-D-INPUTS2" class="KJEDrop">
+                   <div id="KJE-P-INPUTS2" role="button" aria-controls="KJE-E-INPUTS2" class="KJEDropper" tabindex="0" aria-expanded="false">
+                      <table class="KJEToggleTable" role="presentation">
+                         <tbody>
+                            <tr>
+                               <td class="KJEToggleTitle KJEToggleTitle99Cell">
+                                  <h2 class="KJEToggleTitle">Surrender charges:</h2>
+                                  <span class="KJEAccessibleInLine" aria-live="polite"><br>Press spacebar to show inputs</span>
+                               </td>
+                               <td class="KJEToggleIcon KJEInputIcon">
+                                  <div class="KJEToggleOpen" aria-hidden="true"></div>
+                               </td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                </div>
+                <div id="KJE-E-INPUTS2" class="KJEDroppee" style="display: none; width: 100%; transition: height 0.5s ease 0s; height: 0px; visibility: hidden;">
+                   <div id="KJE-C-SURRENDER_PERCENT1" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_PERCENT1" aria-label="Define: Surrender charge #1" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_PERCENT1" class="KJEHelp " id="KJE-LB-SURRENDER_PERCENT1"><span id="KJE-RT-SURRENDER_PERCENT1" class="KJEHelp ">Surrender charge #1</span><span id="KJE-RC-SURRENDER_PERCENT1" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_PERCENT1" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_PERCENT1" class="KJEAccessibleInLine">Enter an amount between 0% and 12%</span></label></div>
+                      <input id="KJE-SURRENDER_PERCENT1" name="SURRENDER_PERCENT1" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_PERCENT1" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_PERCENT1" aria-hidden="true" role="dialog" aria-label="Define: Surrender charge #1">
+                         <button id="KJE-POCLOSE-SURRENDER_PERCENT1" class="KJECloseButton" type="button" aria-label="Close definition Surrender charge #1" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Surrender charge #1 slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-SURRENDER_YEAR1" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_YEAR1" aria-label="Define: For withdrawal in year" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_YEAR1" class="KJEHelp " id="KJE-LB-SURRENDER_YEAR1"><span id="KJE-RT-SURRENDER_YEAR1" class="KJEHelp ">For withdrawal in year</span><span id="KJE-RC-SURRENDER_YEAR1" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_YEAR1" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_YEAR1" class="KJEAccessibleInLine">Enter an amount between 0 and 50</span></label></div>
+                      <input id="KJE-SURRENDER_YEAR1" name="SURRENDER_YEAR1" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_YEAR1" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_YEAR1" aria-hidden="true" role="dialog" aria-label="Define: For withdrawal in year">
+                         <button id="KJE-POCLOSE-SURRENDER_YEAR1" class="KJECloseButton" type="button" aria-label="Close definition For withdrawal in year" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="For withdrawal in year slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <hr class="KJEDivide">
+                   <div id="KJE-C-SURRENDER_PERCENT2" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_PERCENT2" aria-label="Define: Surrender charge #2" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_PERCENT2" class="KJEHelp " id="KJE-LB-SURRENDER_PERCENT2"><span id="KJE-RT-SURRENDER_PERCENT2" class="KJEHelp ">Surrender charge #2</span><span id="KJE-RC-SURRENDER_PERCENT2" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_PERCENT2" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_PERCENT2" class="KJEAccessibleInLine">Enter an amount between 0% and 12%</span></label></div>
+                      <input id="KJE-SURRENDER_PERCENT2" name="SURRENDER_PERCENT2" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_PERCENT2" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_PERCENT2" aria-hidden="true" role="dialog" aria-label="Define: Surrender charge #2">
+                         <button id="KJE-POCLOSE-SURRENDER_PERCENT2" class="KJECloseButton" type="button" aria-label="Close definition Surrender charge #2" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Surrender charge #2 slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-SURRENDER_YEAR2" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_YEAR2" aria-label="Define: For withdrawal in year" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_YEAR2" class="KJEHelp " id="KJE-LB-SURRENDER_YEAR2"><span id="KJE-RT-SURRENDER_YEAR2" class="KJEHelp ">For withdrawal in year</span><span id="KJE-RC-SURRENDER_YEAR2" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_YEAR2" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_YEAR2" class="KJEAccessibleInLine">Enter an amount between 0 and 50</span></label></div>
+                      <input id="KJE-SURRENDER_YEAR2" name="SURRENDER_YEAR2" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_YEAR2" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_YEAR2" aria-hidden="true" role="dialog" aria-label="Define: For withdrawal in year">
+                         <button id="KJE-POCLOSE-SURRENDER_YEAR2" class="KJECloseButton" type="button" aria-label="Close definition For withdrawal in year" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="For withdrawal in year slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <hr class="KJEDivide">
+                   <div id="KJE-C-SURRENDER_PERCENT3" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_PERCENT3" aria-label="Define: Surrender charge #3" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_PERCENT3" class="KJEHelp " id="KJE-LB-SURRENDER_PERCENT3"><span id="KJE-RT-SURRENDER_PERCENT3" class="KJEHelp ">Surrender charge #3</span><span id="KJE-RC-SURRENDER_PERCENT3" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_PERCENT3" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_PERCENT3" class="KJEAccessibleInLine">Enter an amount between 0% and 12%</span></label></div>
+                      <input id="KJE-SURRENDER_PERCENT3" name="SURRENDER_PERCENT3" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_PERCENT3" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_PERCENT3" aria-hidden="true" role="dialog" aria-label="Define: Surrender charge #3">
+                         <button id="KJE-POCLOSE-SURRENDER_PERCENT3" class="KJECloseButton" type="button" aria-label="Close definition Surrender charge #3" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Surrender charge #3 slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-SURRENDER_YEAR3" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_YEAR3" aria-label="Define: For withdrawal in year" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_YEAR3" class="KJEHelp " id="KJE-LB-SURRENDER_YEAR3"><span id="KJE-RT-SURRENDER_YEAR3" class="KJEHelp ">For withdrawal in year</span><span id="KJE-RC-SURRENDER_YEAR3" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_YEAR3" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_YEAR3" class="KJEAccessibleInLine">Enter an amount between 0 and 50</span></label></div>
+                      <input id="KJE-SURRENDER_YEAR3" name="SURRENDER_YEAR3" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_YEAR3" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_YEAR3" aria-hidden="true" role="dialog" aria-label="Define: For withdrawal in year">
+                         <button id="KJE-POCLOSE-SURRENDER_YEAR3" class="KJECloseButton" type="button" aria-label="Close definition For withdrawal in year" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="For withdrawal in year slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <hr class="KJEDivide">
+                   <div id="KJE-C-SURRENDER_PERCENT4" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_PERCENT4" aria-label="Define: Surrender charge #4" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_PERCENT4" class="KJEHelp " id="KJE-LB-SURRENDER_PERCENT4"><span id="KJE-RT-SURRENDER_PERCENT4" class="KJEHelp ">Surrender charge #4</span><span id="KJE-RC-SURRENDER_PERCENT4" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_PERCENT4" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_PERCENT4" class="KJEAccessibleInLine">Enter an amount between 0% and 12%</span></label></div>
+                      <input id="KJE-SURRENDER_PERCENT4" name="SURRENDER_PERCENT4" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_PERCENT4" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_PERCENT4" aria-hidden="true" role="dialog" aria-label="Define: Surrender charge #4">
+                         <button id="KJE-POCLOSE-SURRENDER_PERCENT4" class="KJECloseButton" type="button" aria-label="Close definition Surrender charge #4" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Surrender charge #4 slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-SURRENDER_YEAR4" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_YEAR4" aria-label="Define: For withdrawal in year" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_YEAR4" class="KJEHelp " id="KJE-LB-SURRENDER_YEAR4"><span id="KJE-RT-SURRENDER_YEAR4" class="KJEHelp ">For withdrawal in year</span><span id="KJE-RC-SURRENDER_YEAR4" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_YEAR4" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_YEAR4" class="KJEAccessibleInLine">Enter an amount between 0 and 50</span></label></div>
+                      <input id="KJE-SURRENDER_YEAR4" name="SURRENDER_YEAR4" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_YEAR4" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_YEAR4" aria-hidden="true" role="dialog" aria-label="Define: For withdrawal in year">
+                         <button id="KJE-POCLOSE-SURRENDER_YEAR4" class="KJECloseButton" type="button" aria-label="Close definition For withdrawal in year" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="For withdrawal in year slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <hr class="KJEDivide">
+                   <div id="KJE-C-SURRENDER_PERCENT5" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_PERCENT5" aria-label="Define: Surrender charge #5" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_PERCENT5" class="KJEHelp " id="KJE-LB-SURRENDER_PERCENT5"><span id="KJE-RT-SURRENDER_PERCENT5" class="KJEHelp ">Surrender charge #5</span><span id="KJE-RC-SURRENDER_PERCENT5" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_PERCENT5" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_PERCENT5" class="KJEAccessibleInLine">Enter an amount between 0% and 12%</span></label></div>
+                      <input id="KJE-SURRENDER_PERCENT5" name="SURRENDER_PERCENT5" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_PERCENT5" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_PERCENT5" aria-hidden="true" role="dialog" aria-label="Define: Surrender charge #5">
+                         <button id="KJE-POCLOSE-SURRENDER_PERCENT5" class="KJECloseButton" type="button" aria-label="Close definition Surrender charge #5" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">4%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">8%</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">12%</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="Surrender charge #5 slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div id="KJE-C-SURRENDER_YEAR5" class="KJEInputContainer">
+                      <div class="KJEHelp " style="position: absolute; display: inline-block; width: 190px; left: 0px; top: 7.5px;"><button id="KJE-PO-SURRENDER_YEAR5" aria-label="Define: For withdrawal in year" class="KJEDefinitionIcon" tabindex="0" type="button">?</button><label for="KJE-SURRENDER_YEAR5" class="KJEHelp " id="KJE-LB-SURRENDER_YEAR5"><span id="KJE-RT-SURRENDER_YEAR5" class="KJEHelp ">For withdrawal in year</span><span id="KJE-RC-SURRENDER_YEAR5" class="KJEHelp ">:</span><span id="KJE-RR-SURRENDER_YEAR5" class="KJERequired">*<span class="KJERequiredShowHover">This entry is required.</span></span><span id="KJE-RG-SURRENDER_YEAR5" class="KJEAccessibleInLine">Enter an amount between 0 and 50</span></label></div>
+                      <input id="KJE-SURRENDER_YEAR5" name="SURRENDER_YEAR5" class="KJEInput KJEInputModern" aria-describedby="KJE-PODEFN-SURRENDER_YEAR5" aria-invalid="false" style="height: 20px; top: 2px; position: absolute; display: inline-block; width: 80px; left: 195px;">
+                      <div class="KJEGuiDefnPopup" id="KJE-PODEFN-SURRENDER_YEAR5" aria-hidden="true" role="dialog" aria-label="Define: For withdrawal in year">
+                         <button id="KJE-POCLOSE-SURRENDER_YEAR5" class="KJECloseButton" type="button" aria-label="Close definition For withdrawal in year" tabindex="0">X</button>
+                         <div class="KJEDefinitionPopup">
+                            <h3 class="KJEDefinition">Surrender charges</h3>
+                            <p class="KJEDefinition">Surrender charges are a percent of the annuity balance you will be charged if you withdraw your annuity balance early. The actual surrender charges vary widely from annuity to annuity. Make sure to check with your investment adviser if you are unsure of the surrender charges that may apply to your particular annuity.</p>
+                         </div>
+                      </div>
+                      <div class="KJEScale" aria-hidden="true" style="position: absolute; height: 28px; cursor: pointer; top: 2.8px; left: 286px; display: inline-block; width: 550px;">
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: left; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">0</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; left: 0px;">16</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: center; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">33</div>
+                         <div class="KJEScale" style="position: absolute; height: 28px; text-align: right; cursor: pointer; top: 0px; width: 66.66%; right: 0px;">50</div>
+                      </div>
+                      <div aria-hidden="true" class="KJESlider" style="position: absolute; display: inline-block; left: 280px; height: 28px; width: 550px;"><input type="range" aria-hidden="true" min="0" max="100" step=".01" title="For withdrawal in year slider" tabindex="-1" class="KJERange" style="height: 18px; outline: none; position: relative; cursor: pointer; left: 12px; width: 538px;"></div>
+                   </div>
+                   <div style="height:10px"></div>
+                </div>
+                <figure style="margin:0; padding:0;">
+                   <figcaption id="KJE-F-GRAPH1" class="KJEAccessible"><span class="KJEAccessible" id="KJE-F-GRAPH1_TITLE"></span> Line Graph: Please view the report to see detailed calculation results in tabular form.</figcaption>
+                   <div id="KJE-C-GRAPH1" style="width: 848px; transition: height 0.5s ease 0s; background-color: rgb(223, 224, 219); height: 281px;" class="KJEGraphContainer">
+                      <div class="KJEGraphDropper" role="button" tabindex="0" aria-expanded="true">
+                         <table class="KJEToggleTable" role="presentation">
+                            <tbody>
+                               <tr>
+                                  <td class="KJEGraphTitle KJEToggleTitle99Cell">
+                                     <h2 class="KJEGraphTitle"></h2>
+                                     <span class="KJEAccessibleInLine" aria-live="polite"><br>press spacebar to hide graph</span>
+                                  </td>
+                                  <td class="KJEToggleIcon KJEGraphIcon">
+                                     <div class="KJEToggleClose" aria-hidden="true"></div>
+                                  </td>
+                               </tr>
+                            </tbody>
+                         </table>
+                      </div>
+                      <canvas id="KJE-G-GRAPH1" class="KJEGraph" width="1696" height="500" style="width: 848px; height: 250px;"></canvas>
+                   </div>
+                </figure>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div id="KJEFixed" style="position: absolute; top: -21px; left: 0px; margin-right: auto; margin-left: auto; width: auto;" class="KJEButtonIsScrolling">
+       <div id="KJECommandButtons" style="opacity: 1;"><input type="button" class="KJECommandButton" name="KJECalculate" id="KJECalculate" value="Calculate" style="display: inline-block;"><input type="button" class="KJECommandButton" id="KJEViewReport" name="KJEViewReport" value="View Report" style="display: inline-block;"></div>
+       <div id="KJEScrollSticky" style="display:none;" class="KJEError KJEErrorCalculation">Your current age must be less than your age at retirement. </div>
+    </div>
+ </div>
+</body>
+</html>
